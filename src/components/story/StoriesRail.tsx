@@ -1,3 +1,5 @@
+'use client';
+
 import { StoryBubble } from './StoryBubble';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
