@@ -4,65 +4,65 @@
 
 @layer base {
   :root {
-    --background: 210 100% 97.1%; /* #f2f9ff Light desaturated blue */
-    --foreground: 212 35% 35%; /* Moderate dark blue for text */
+    --background: 200 60% 97%; /* Very light cool grey/blue */
+    --foreground: 210 30% 25%; /* Dark desaturated blue for text */
 
     --card: 0 0% 100%;
-    --card-foreground: 212 35% 35%;
+    --card-foreground: 210 30% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 212 35% 35%;
+    --popover-foreground: 210 30% 25%;
 
-    --primary: 140 96% 72%; /* #73FB9F Saturated sky blue (light green) */
-    --primary-foreground: 140 60% 20%; /* Dark green for contrast on primary */
+    --primary: 180 70% 50%; /* Vibrant Teal */
+    --primary-foreground: 180 70% 15%; /* Dark Teal for contrast on primary */
 
-    --secondary: 210 75% 90%; /* Lighter blue for secondary elements */
-    --secondary-foreground: 212 35% 30%; /* Darker text for secondary */
+    --secondary: 200 50% 92%; /* Lighter cool grey/blue for secondary elements */
+    --secondary-foreground: 210 30% 30%; /* Darker text for secondary */
 
-    --muted: 210 50% 94%;
+    --muted: 200 40% 95%;
     --muted-foreground: 210 30% 55%;
 
-    --accent: 30 95% 71.6%; /* #fbb473 Soft orange */
-    --accent-foreground: 30 60% 20%; /* Dark orange/brown for contrast on accent */
+    --accent: 330 80% 65%; /* Bright Pink/Magenta */
+    --accent-foreground: 330 80% 15%; /* Dark Pink/Magenta for contrast on accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 30% 88%;
-    --input: 210 40% 95%;
-    --ring: 140 80% 65%; /* Ring color based on primary */
+    --border: 200 30% 85%;
+    --input: 200 30% 93%;
+    --ring: 180 70% 50%; /* Ring color based on primary */
 
     --radius: 0.75rem; /* Softer rounded corners */
   }
 
   .dark {
-    --background: 212 30% 12%; /* Dark blue/grey */
-    --foreground: 210 30% 90%; /* Light grey/blue text */
+    --background: 210 30% 10%; /* Very dark blue */
+    --foreground: 200 30% 92%; /* Light cool grey/blue text */
 
-    --card: 212 30% 18%;
-    --card-foreground: 210 30% 90%;
+    --card: 210 30% 15%;
+    --card-foreground: 200 30% 92%;
 
-    --popover: 212 30% 10%;
-    --popover-foreground: 210 30% 90%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 200 30% 92%;
 
-    --primary: 140 96% 72%; /* #73FB9F */
-    --primary-foreground: 140 60% 20%;
+    --primary: 180 70% 55%; /* Vibrant Teal (slightly lighter for dark mode) */
+    --primary-foreground: 180 70% 15%; /* Dark Teal */
 
-    --secondary: 212 30% 25%;
-    --secondary-foreground: 210 30% 90%;
+    --secondary: 210 30% 20%; /* Darker blue */
+    --secondary-foreground: 200 30% 90%;
 
-    --muted: 212 30% 22%;
+    --muted: 210 30% 18%;
     --muted-foreground: 210 30% 65%;
 
-    --accent: 30 95% 71.6%; /* #fbb473 */
-    --accent-foreground: 30 60% 20%;
+    --accent: 330 80% 70%; /* Bright Pink/Magenta (slightly lighter for dark mode) */
+    --accent-foreground: 330 80% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 212 30% 30%;
-    --input: 212 30% 25%;
-    --ring: 140 80% 65%;
+    --border: 210 30% 25%;
+    --input: 210 30% 22%;
+    --ring: 180 70% 55%;
   }
 }
 
