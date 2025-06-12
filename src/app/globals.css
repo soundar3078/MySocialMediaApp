@@ -2,79 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 210 100% 97.1%; /* #f2f9ff Light desaturated blue */
+    --foreground: 212 35% 35%; /* Moderate dark blue for text */
+
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 212 35% 35%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --popover-foreground: 212 35% 35%;
+
+    --primary: 140 96% 72%; /* #73FB9F Saturated sky blue (light green) */
+    --primary-foreground: 140 60% 20%; /* Dark green for contrast on primary */
+
+    --secondary: 210 75% 90%; /* Lighter blue for secondary elements */
+    --secondary-foreground: 212 35% 30%; /* Darker text for secondary */
+
+    --muted: 210 50% 94%;
+    --muted-foreground: 210 30% 55%;
+
+    --accent: 30 95% 71.6%; /* #fbb473 Soft orange */
+    --accent-foreground: 30 60% 20%; /* Dark orange/brown for contrast on accent */
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --border: 210 30% 88%;
+    --input: 210 40% 95%;
+    --ring: 140 80% 65%; /* Ring color based on primary */
+
+    --radius: 0.75rem; /* Softer rounded corners */
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 212 30% 12%; /* Dark blue/grey */
+    --foreground: 210 30% 90%; /* Light grey/blue text */
+
+    --card: 212 30% 18%;
+    --card-foreground: 210 30% 90%;
+
+    --popover: 212 30% 10%;
+    --popover-foreground: 210 30% 90%;
+
+    --primary: 140 96% 72%; /* #73FB9F */
+    --primary-foreground: 140 60% 20%;
+
+    --secondary: 212 30% 25%;
+    --secondary-foreground: 210 30% 90%;
+
+    --muted: 212 30% 22%;
+    --muted-foreground: 210 30% 65%;
+
+    --accent: 30 95% 71.6%; /* #fbb473 */
+    --accent-foreground: 30 60% 20%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --border: 212 30% 30%;
+    --input: 212 30% 25%;
+    --ring: 140 80% 65%;
   }
 }
 
@@ -84,5 +72,55 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+}
+
+/* For animated gradient story ring */
+.story-ring-active::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  padding: 3px; /* border thickness */
+  background: conic-gradient(from 0deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
+  animation: spin 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: subtract;
+  z-index: -1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer placeholder */
+.shimmer {
+  background: linear-gradient(to right, hsl(var(--muted) / 0.5) 8%, hsl(var(--muted) / 0.8) 18%, hsl(var(--muted) / 0.5) 33%);
+  background-size: 1200px 100%;
+  animation: shimmer-animation 1.5s infinite linear;
+}
+
+@keyframes shimmer-animation {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+/* Frosted glass effect */
+.frosted-glass {
+  background-color: hsl(var(--background) / 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
