@@ -7,19 +7,19 @@ import { PostCard, type Post } from "@/components/post/PostCard";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 
 const mockUserProfile = {
-  name: "ChirpSync User",
-  username: "chirpsync_dev",
-  avatarUrl: "https://placehold.co/200x200.png?text=CS",
+  name: "Vibe Connect User",
+  username: "vibeconnect_dev",
+  avatarUrl: "https://placehold.co/200x200.png?text=VC",
   coverImageUrl: "https://placehold.co/1200x400.png",
-  bio: "Building the future of social connection. Sync your vibes with ChirpSync! 🚀 #NextGenSocial #DevLife",
+  bio: "Building the future of social connection. Connect your vibes with Vibe Connect! 🚀 #NextGenSocial #DevLife",
   followers: 1234,
   following: 567,
   mood: "💡 Inspired",
   posts: [
      {
       id: 'profile_post_1',
-      user: { name: 'ChirpSync User', avatarUrl: 'https://placehold.co/100x100.png?text=CS', username: 'chirpsync_dev' },
-      content: 'Excited to share some new features coming soon to ChirpSync! Stay tuned. #ProductUpdate',
+      user: { name: 'Vibe Connect User', avatarUrl: 'https://placehold.co/100x100.png?text=VC', username: 'vibeconnect_dev' },
+      content: 'Excited to share some new features coming soon to Vibe Connect! Stay tuned. #ProductUpdate',
       timestamp: '1d ago',
       likes: 102,
       comments: 15,
@@ -128,7 +128,7 @@ export default function ProfilePage() {
           <Card>
             <CardHeader>
               <CardTitle>App Settings</CardTitle>
-              <CardDescription>Manage your ChirpSync preferences.</CardDescription>
+              <CardDescription>Manage your Vibe Connect preferences.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between p-3 rounded-lg border hover:bg-muted/50">

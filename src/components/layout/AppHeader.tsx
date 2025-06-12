@@ -12,7 +12,7 @@ export function AppHeader() {
       <div className="container flex h-16 items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/feed" className="flex items-center gap-2">
           <LogoIcon className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl font-bold text-primary">ChirpSync</span>
+          <span className="font-headline text-2xl font-bold text-primary">Vibe Connect</span>
         </Link>
 
         <div className="flex flex-1 items-center justify-end space-x-4">
@@ -32,7 +32,7 @@ export function AppHeader() {
             <Link href="/profile">
               <Avatar className="h-9 w-9 cursor-pointer">
                 <AvatarImage src="https://placehold.co/100x100.png" alt="User Avatar" data-ai-hint="user avatar" />
-                <AvatarFallback>CS</AvatarFallback>
+                <AvatarFallback>VC</AvatarFallback>
               </Avatar>
             </Link>
           </nav>

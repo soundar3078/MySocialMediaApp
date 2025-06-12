@@ -16,7 +16,7 @@ export default function FeedPage() {
       </div>
       <StoriesRail />
       <div className="mt-6">
-        <h2 className="text-2xl font-bold font-headline mb-4 uppercase tracking-wider">Latest Chirps</h2>
+        <h2 className="text-2xl font-bold font-headline mb-4 uppercase tracking-wider">Latest Vibes</h2>
         <FeedDisplay />
       </div>
     </div>

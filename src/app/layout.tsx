@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'ChirpSync',
+  title: 'Vibe Connect',
   description: 'Sync your vibes, share your moments.',
 };
 

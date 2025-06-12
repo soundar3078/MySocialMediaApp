@@ -13,6 +13,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { useToast } from '@/hooks/use-toast';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+
 
 export default function CreatePostPage() {
   const [postContent, setPostContent] = useState('');
@@ -56,12 +59,12 @@ export default function CreatePostPage() {
   
   const handlePostSubmit = () => {
     if (!postContent.trim()) {
-      toast({ title: "Cannot Post Empty Chirp", description: "Please write something to post.", variant: "destructive" });
+      toast({ title: "Cannot Post Empty Vibe", description: "Please write something to post.", variant: "destructive" });
       return;
     }
     // Actual post submission logic here
     console.log({ postContent, mood, tags, isScheduling, scheduledTime });
-    toast({ title: "Chirp Sent!", description: "Your thoughts are now out in the world (or scheduled)!" });
+    toast({ title: "Vibe Sent!", description: "Your thoughts are now out in the world (or scheduled)!" });
     setPostContent('');
     setMood('');
     setTags([]);
@@ -74,11 +77,11 @@ export default function CreatePostPage() {
       <CardHeader className="border-b pb-4">
         <div className="flex items-center space-x-3">
           <Avatar>
-            <AvatarImage src="https://placehold.co/100x100.png?text=CS" alt="User Avatar" data-ai-hint="user avatar" />
-            <AvatarFallback>CS</AvatarFallback>
+            <AvatarImage src="https://placehold.co/100x100.png?text=VC" alt="User Avatar" data-ai-hint="user avatar" />
+            <AvatarFallback>VC</AvatarFallback>
           </Avatar>
           <div>
-            <p className="font-semibold font-headline">ChirpSync User</p>
+            <p className="font-semibold font-headline">Vibe Connect User</p>
             <Button variant="outline" size="sm" className="text-xs h-6 mt-0.5">
               <Globe className="mr-1 h-3 w-3" /> Public
             </Button>
@@ -87,7 +90,7 @@ export default function CreatePostPage() {
       </CardHeader>
       <CardContent className="p-4 space-y-4">
         <Textarea
-          placeholder="What's on your mind, @ChirpSync User?"
+          placeholder="What's on your mind, @VibeConnect User?"
           className="text-lg border-0 focus-visible:ring-0 focus-visible:ring-offset-0 min-h-[120px] p-0 resize-none shadow-none"
           value={postContent}
           onChange={(e) => setPostContent(e.target.value)}
@@ -147,7 +150,7 @@ export default function CreatePostPage() {
             disabled={!postContent.trim() && !isScheduling}
             className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
         >
-          <Send className="mr-2 h-4 w-4" /> {isScheduling && scheduledTime ? 'Schedule' : 'Chirp'}
+          <Send className="mr-2 h-4 w-4" /> {isScheduling && scheduledTime ? 'Schedule' : 'Vibe'}
         </Button>
       </CardFooter>
     </Card>
